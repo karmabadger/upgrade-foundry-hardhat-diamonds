@@ -16,8 +16,8 @@ async function printSelectors(
 ) {
   const contractFilePath = path.join(
     artifactFolderPath,
-    `${contractName}.sol',
-    '${contractName}.json`
+    `${contractName}.sol`,
+    `${contractName}.json`
   );
   const contractArtifact = require(contractFilePath);
   const abi = contractArtifact.abi;
