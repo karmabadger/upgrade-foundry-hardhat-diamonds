@@ -1,5 +1,5 @@
-import { ContractFactory, utils } from "ethers";
-import path from "path/posix";
+const { ContractFactory, utils } = require("ethers");
+const path = require("path/posix");
 
 const args = process.argv.slice(2);
 
@@ -13,8 +13,8 @@ if (args.length != 1) {
 async function printSelectors(contractName, artifactFolderPath = "../out") {
   const contractFilePath = path.join(
     artifactFolderPath,
-    `${contractName}.sol',
-    '${contractName}.json`
+    `${contractName}.sol`,
+    `${contractName}.json`
   );
   const contractArtifact = require(contractFilePath);
   const abi = contractArtifact.abi;
